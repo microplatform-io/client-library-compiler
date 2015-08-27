@@ -1,0 +1,82 @@
+package platform;
+ 	  
+message Request {
+    optional bytes context  = 1;
+    optional int32 method   = 2;
+    optional int32 resource = 3;
+    optional bytes payload  = 4;
+}
+
+message RoutedMessage {
+    optional string id          = 1;
+    optional int32 method       = 2;
+    optional int32 resource     = 3;
+    optional string reply_topic = 4;
+    optional bytes body         = 5;
+}
+
+message ConsumeEvent {
+    optional string description             = 1;
+    optional Event event                    = 2;
+    repeated Event responses                = 3;
+    repeated PossibleError possible_errors  = 4;
+    optional bool is_deprecated             = 5;
+    optional string version                 = 6;
+}
+
+message Documentation {
+    optional string description             = 1;
+    repeated ConsumeEvent consume_events    = 2;
+}
+
+message DocumentationList {
+    repeated Documentation documentations   = 1;
+}
+
+message Error {
+    optional string message     = 1;
+}
+
+message Event {
+    optional string organization    = 4;
+    optional string method          = 1;
+    optional string resource        = 2;
+    optional string payload         = 3;
+}
+
+message RouterConfig {
+    enum RouterType {
+        ROUTER_TYPE_WEBSOCKET    = 1;
+        ROUTER_TYPE_GRPC         = 2;
+    }
+
+    enum ProtocolType {
+        PROTOCOL_TYPE_HTTP   = 1;
+        PROTOCOL_TYPE_HTTPS  = 2;
+    }
+
+    optional ProtocolType protocol_type      = 1;
+    optional string host                     = 2;
+    optional string port                     = 3;
+    optional RouterType router_type          = 4;
+}
+
+message RouterConfigList {
+    repeated RouterConfig router_configs = 1;
+}
+
+enum Method {
+    REPLY       = 14;
+    GET         = 15;
+}
+
+message PossibleError {
+    optional string error        = 1;
+    optional string description  = 2;
+}
+
+enum Resource {
+    DOCUMENTATION           = 65533;
+    DOCUMENTATION_LIST      = 65534;
+    ERROR                   = 65535;
+}

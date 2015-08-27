@@ -1,0 +1,687 @@
+[
+    {
+        "description": "Check if an account session is valid",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.ACCOUNT_SESSION",
+            "payload": ""
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ACCOUNT_SESSION",
+                "payload": "client.AccountSession"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Add a push token to an account",
+        "request": {
+            "method": "client.Method.CREATE",
+            "resource": "client.Resource.PUSH_TOKEN",
+            "payload": "client.PushToken"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.PUSH_TOKEN",
+                "payload": "client.PushToken"
+            }
+        ]
+    },
+    {
+        "description": "Create a call",
+        "request": {
+            "method": "client.Method.CREATE",
+            "resource": "client.Resource.CALL",
+            "payload": "client.Call"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CALL",
+                "payload": "client.Call"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Create a credential",
+        "request": {
+            "method": "client.Method.CREATE",
+            "resource": "client.Resource.CREDENTIAL",
+            "payload": "client.Credential"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CREDENTIAL",
+                "payload": "client.Credential"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Create a credential reminder",
+        "request": {
+            "method": "client.Method.CREATE",
+            "resource": "client.Resource.CREDENTIAL_REMINDER",
+            "payload": "client.CredentialReminder"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CREDENTIAL_REMINDER",
+                "payload": "client.CredentialReminder"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Create a purchase order",
+        "request": {
+            "method": "client.Method.CREATE",
+            "resource": "client.Resource.PURCHASE_ORDER",
+            "payload": "client.PurchaseOrder"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.RECEIPT",
+                "payload": "client.Receipt"
+            }
+        ]
+    },
+    {
+        "description": "Create an account",
+        "request": {
+            "method": "client.Method.CREATE",
+            "resource": "client.Resource.ACCOUNT_REGISTRATION",
+            "payload": "client.AccountRegistration"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ACCOUNT_REGISTRATION",
+                "payload": "client.AccountRegistration"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Create an account session",
+        "request": {
+            "method": "client.Method.CREATE",
+            "resource": "client.Resource.ACCOUNT_SESSION",
+            "payload": "client.Credential"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ACCOUNT_SESSION",
+                "payload": "client.AccountSession"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Delete a call",
+        "request": {
+            "method": "client.Method.DELETE",
+            "resource": "client.Resource.CALL",
+            "payload": "client.Call"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.GENERIC_SUCCESS",
+                "payload": "client.GenericSuccess"
+            }
+        ]
+    },
+    {
+        "description": "Delete a credential",
+        "request": {
+            "method": "client.Method.DELETE",
+            "resource": "client.Resource.CREDENTIAL",
+            "payload": "client.Credential"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.GENERIC_SUCCESS",
+                "payload": "client.GenericSuccess"
+            }
+        ]
+    },
+    {
+        "description": "Delete a voicemail",
+        "request": {
+            "method": "client.Method.DELETE",
+            "resource": "client.Resource.VOICEMAIL",
+            "payload": "client.Voicemail"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.GENERIC_SUCCESS",
+                "payload": "client.GenericSuccess"
+            }
+        ]
+    },
+    {
+        "description": "Delete an account session",
+        "request": {
+            "method": "client.Method.DELETE",
+            "resource": "client.Resource.ACCOUNT_SESSION",
+            "payload": "client.AccountSession"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.GENERIC_SUCCESS",
+                "payload": "client.GenericSuccess"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of SKUs",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.SKU_LIST",
+            "payload": "client.SKUList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.SKU_LIST",
+                "payload": "client.SKUList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of access numbers",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.ACCESS_NUMBER_LIST",
+            "payload": "client.AccessNumberList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ACCESS_NUMBER_LIST",
+                "payload": "client.AccessNumberList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of account sessions",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.ACCOUNT_SESSION_LIST",
+            "payload": "client.AccountSessionList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ACCOUNT_SESSION_LIST",
+                "payload": "client.AccountSessionList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of callers",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.CALLER_LIST",
+            "payload": "client.CallerList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CALLER_LIST",
+                "payload": "client.CallerList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of calls",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.CALL_LIST",
+            "payload": "client.CallList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CALL_LIST",
+                "payload": "client.CallList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of credentials",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.CREDENTIAL_LIST",
+            "payload": "client.CredentialList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CREDENTIAL_LIST",
+                "payload": "client.CredentialList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of credit cards",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.CREDIT_CARD_LIST",
+            "payload": "client.CreditCardList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CREDIT_CARD_LIST",
+                "payload": "client.CreditCardList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of documents",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.DOCUMENT_LIST",
+            "payload": "client.DocumentList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.DOCUMENT_LIST",
+                "payload": "client.DocumentList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of service availabilities",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.SERVICE_AVAILABILITY_LIST",
+            "payload": "client.ServiceAvailabilityList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.SERVICE_AVAILABILITY_LIST",
+                "payload": "client.ServiceAvailabilityList"
+            }
+        ]
+    },
+    {
+        "description": "Get a list of voicemails",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.VOICEMAIL_LIST",
+            "payload": "client.VoicemailList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.VOICEMAIL_LIST",
+                "payload": "client.VoicemailList"
+            }
+        ]
+    },
+    {
+        "description": "Get account settings",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.ACCOUNT_SETTINGS",
+            "payload": "client.AccountSettings"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ACCOUNT_SETTINGS",
+                "payload": "client.AccountSettings"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get an account instance",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.ACCOUNT",
+            "payload": "client.Account"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ACCOUNT",
+                "payload": "client.Account"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get carrier information for a credential",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.CREDENTIAL_TELECOM_CARRIER",
+            "payload": "client.CredentialTelecomCarrier"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CREDENTIAL_TELECOM_CARRIER",
+                "payload": "client.CredentialTelecomCarrier"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Get documentation for all active microservices",
+        "request": {
+            "method": "platform.Method.GET",
+            "resource": "platform.Resource.DOCUMENTATION_LIST",
+            "payload": "platform.DocumentationList"
+        },
+        "responses": [
+            {
+                "method": "platform.Method.REPLY",
+                "resource": "platform.Resource.DOCUMENTATION_LIST",
+                "payload": "platform.DocumentationList"
+            },
+            {
+                "method": "platform.Method.REPLY",
+                "resource": "platform.Resource.ERROR",
+                "payload": "platform.Error"
+            }
+        ]
+    },
+    {
+        "description": "Get the customer service info",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.CUSTOMER_SERVICE",
+            "payload": "client.CustomerService"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CUSTOMER_SERVICE",
+                "payload": "client.CustomerService"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Perform a lock down check",
+        "request": {
+            "method": "client.Method.GET",
+            "resource": "client.Resource.LOCK_DOWN",
+            "payload": "client.LockDown"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.LOCK_DOWN",
+                "payload": "client.LockDown"
+            }
+        ]
+    },
+    {
+        "description": "Update a caller",
+        "request": {
+            "method": "client.Method.UPDATE",
+            "resource": "client.Resource.CALLER",
+            "payload": "client.Caller"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CALLER",
+                "payload": "client.Caller"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Update a credential",
+        "request": {
+            "method": "client.Method.UPDATE",
+            "resource": "client.Resource.CREDENTIAL",
+            "payload": "client.Credential"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CREDENTIAL",
+                "payload": "client.Credential"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Update a credit card",
+        "request": {
+            "method": "client.Method.UPDATE",
+            "resource": "client.Resource.CREDIT_CARD",
+            "payload": "client.CreditCard"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CREDIT_CARD",
+                "payload": "client.CreditCard"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Update a list of voicemails",
+        "request": {
+            "method": "client.Method.UPDATE",
+            "resource": "client.Resource.VOICEMAIL_LIST",
+            "payload": "client.VoicemailList"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.VOICEMAIL_LIST",
+                "payload": "client.VoicemailList"
+            }
+        ]
+    },
+    {
+        "description": "Update a voicemail",
+        "request": {
+            "method": "client.Method.UPDATE",
+            "resource": "client.Resource.VOICEMAIL",
+            "payload": "client.Voicemail"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.VOICEMAIL",
+                "payload": "client.Voicemail"
+            }
+        ]
+    },
+    {
+        "description": "Update account settings",
+        "request": {
+            "method": "client.Method.UPDATE",
+            "resource": "client.Resource.ACCOUNT_SETTINGS",
+            "payload": "client.AccountSettings"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ACCOUNT_SETTINGS",
+                "payload": "client.AccountSettings"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    },
+    {
+        "description": "Verify a credential",
+        "request": {
+            "method": "client.Method.CREATE",
+            "resource": "client.Resource.CREDENTIAL_VERIFICATION",
+            "payload": "client.CredentialVerification"
+        },
+        "responses": [
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.CREDENTIAL_VERIFICATION",
+                "payload": "client.CredentialVerification"
+            },
+            {
+                "method": "client.Method.REPLY",
+                "resource": "client.Resource.ERROR_LIST",
+                "payload": "client.ErrorList"
+            }
+        ]
+    }
+]
